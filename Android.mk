@@ -48,4 +48,5 @@ include $(SAM_ROOT)/dtbhtool/Android.mk
 include $(SAM_ROOT)/hidl/Android.mk
 include $(SAM_ROOT)/modemloader/Android.mk
 include $(SAM_ROOT)/ril/Android.mk
+include $(SAM_ROOT)/liblights/Android.mk
 endif
