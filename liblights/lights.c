@@ -73,8 +73,12 @@ static int g_cur_led = -1;          // Presently showing LED of the above.
 
 void check_component_support()
 {
+#ifdef EXYNOS5433
+    hw_components |= COMPONENT_BUTTON_LIGHT;
+#else
     if (access(BUTTON_BRIGHTNESS_NODE, W_OK) == 0)
         hw_components |= COMPONENT_BUTTON_LIGHT;
+#endif
     if (access(LED_BLINK_NODE, W_OK) == 0)
         hw_components |= COMPONENT_LED;
 #ifdef LED_BLN_NODE
